@@ -1,0 +1,205 @@
+extends layout.pug
+ 
+block content  
+    header
+        .overlay
+        video(plasinline="playsinline", autoplay="autoplay", muted="muted", loop="loop")
+            source(src="assets/video.mp4", type="video/mp4")
+        .container.h-100
+            .d-flex.h-100.text-center.align-items-center
+                .w-100.text-white
+                    h1.display-3 Welcome To RAD Tattoo
+                    p.lead.mb-0 Your tattoo & peircing shop
+                    a.btn.btn-primary.btn-xl.text-uppercase(href='#gallery') Check Our Gallery
+ 
+     
+    //Services
+    section#services.page-section
+        .container
+            .text-center
+                h2.section-heading.text-uppercase.highlighted Services
+                h3.section-subheading.text-muted Our services spectrum encompasses many techniques and procedures from body piercing, custom design and cover up tattoos.
+            .row.text-center
+                .col-md-4
+                    .service
+                        img.mx-auto.rounded-circle(src='assets/img/services/cover-ups.jpg', alt='...')
+                        h4 Tattoos & Cover-ups 
+                        p.text-muted
+                            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.                 
+                .col-md-4
+                    .service
+                        img.mx-auto.rounded-circle(src='assets/img/services/custom.jpg', alt='...')
+                        h4.my-3 Custom Design
+                        p.text-muted
+                            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+                .col-md-4
+                    .service
+                        img.mx-auto.rounded-circle(src='assets/img/services/piercing.jpg', alt='...')
+                        h4.my-3 Piercing & Jewellery
+                        p.text-muted
+                            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+
+    // Portfolio Grid
+    section#portfolio.page-section.bg-dark
+        .container
+            .text-center
+                h2.section-heading.text-uppercase.highlighted Our Works
+                h3.section-subheading.text-muted Discover our works from minimal, medium to large designs.
+            .row
+                .col-lg-4.col-sm-6.mb-4
+                    // Portfolio item 1
+                    .portfolio-item
+                        a.portfolio-link(data-bs-toggle='modal', href='#portfolioModal1')
+                            .portfolio-hover
+                                .portfolio-hover-content
+                                    i.fas.fa-plus.fa-3x
+                            img.img-fluid(src='assets/img/portfolio/small.jpg', alt='...')
+                        .portfolio-caption
+                            .portfolio-caption-heading Minimal
+                            .portfolio-caption-subheading.text-muted See More
+                .col-lg-4.col-sm-6.mb-4
+                    // Portfolio item 2
+                    .portfolio-item
+                        a.portfolio-link(data-bs-toggle='modal', href='#portfolioModal2')
+                            .portfolio-hover
+                                .portfolio-hover-content
+                                    i.fas.fa-plus.fa-3x
+                            img.img-fluid(src='assets/img/portfolio/medium.jpg', alt='...')
+                        .portfolio-caption
+                            .portfolio-caption-heading Medium
+                            .portfolio-caption-subheading.text-muted See More
+                .col-lg-4.col-sm-6.mb-4
+                    // Portfolio item 3
+                    .portfolio-item
+                        a.portfolio-link(data-bs-toggle='modal', href='#portfolioModal3')
+                            .portfolio-hover
+                                .portfolio-hover-content
+                                    i.fas.fa-plus.fa-3x
+                            img.img-fluid(src='assets/img/portfolio/large.jpg', alt='...')
+                        .portfolio-caption
+                            .portfolio-caption-heading Large
+                            .portfolio-caption-subheading.text-muted See More 
+
+    // Artists
+    section#team.page-section
+        .container
+            .text-center
+                h2.section-heading.text-uppercase.highlighted Our Artists
+                h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
+            .row
+                .col-lg-4
+                    .team-member
+                        img.mx-auto.rounded-circle(src='assets/img/team/artist.jpg', alt='...')
+                        h4 Rany Delgado
+                        p.text-muted Tattoo Artist & Piercing
+                        p.text-muted 
+                            | Branch: Siargao
+                .col-lg-4
+                    .team-member
+                        img.mx-auto.rounded-circle(src='assets/img/team/artist.jpg', alt='...')
+                        h4 Rany Delgado
+                        p.text-muted Tattoo Artist
+                        p.text-muted 
+                            | Branch: Queens Davao City
+                .col-lg-4
+                    .team-member
+                        img.mx-auto.rounded-circle(src='assets/img/team/artist.jpg', alt='...')
+                        h4 Rany Delgado
+                        p.text-muted Tattoo Artist 
+                        p.text-muted 
+                            | Branch: SM Davao City
+            .row
+                .col-lg-8.mx-auto.text-center
+                    p.large.text-muted
+                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.
+
+    // Partners
+    div.py-5.bg-light
+        .container
+            .row.align-items-center
+                .col-md-3.col-sm-6.my-3
+                    a(href='#!')
+                        img.img-fluid.img-brand.d-block.mx-auto(src='assets/img/logos/microsoft.svg', alt='...')
+                .col-md-3.col-sm-6.my-3
+                    a(href='#!')
+                        img.img-fluid.img-brand.d-block.mx-auto(src='assets/img/logos/google.svg', alt='...')
+                .col-md-3.col-sm-6.my-3
+                    a(href='#!')
+                        img.img-fluid.img-brand.d-block.mx-auto(src='assets/img/logos/facebook.svg', alt='...')
+                .col-md-3.col-sm-6.my-3
+                    a(href='#!')
+                        img.img-fluid.img-brand.d-block.mx-auto(src='assets/img/logos/ibm.svg', alt='...')
+ 
+ 
+    // About
+    section#about.page-section.bg-dark
+        .container
+            .text-center
+                h2.section-heading.text-uppercase.highlighted Our Story
+                h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
+            ul.timeline
+                li
+                    .timeline-image
+                        img.rounded-circle.img-fluid(src='assets/img/about/beginning.jpg', alt='...')
+                    .timeline-panel
+                        .timeline-heading
+                            h4 2009
+                            h4.subheading Where we started
+                        .timeline-body
+                            p.text-muted
+                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
+                li.timeline-inverted
+                    .timeline-image
+                        img.rounded-circle.img-fluid(src='assets/img/about/davao_queens.jpg', alt='...')
+                    .timeline-panel
+                        .timeline-heading
+                            h4 March 2012
+                            h4.subheading Davao Queens
+                        .timeline-body
+                            p.text-muted
+                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
+                li
+                    .timeline-image
+                        img.rounded-circle.img-fluid(src='assets/img/about/siargao.jpg', alt='...')
+                    .timeline-panel
+                        .timeline-heading
+                            h4 December 2019
+                            h4.subheading Expanding to Siargao
+                        .timeline-body
+                            p.text-muted
+                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
+                li.timeline-inverted
+                    .timeline-image
+                        img.rounded-circle.img-fluid(src='assets/img/about/davao_sm.jpg', alt='...')
+                    .timeline-panel
+                        .timeline-heading
+                            h4 Nov 2021
+                            h4.subheading SM Davao
+                        .timeline-body
+                            p.text-muted
+                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
+                li.timeline-inverted
+                    .timeline-image
+                        h4
+                            | Soon
+                            br
+                            | Cagayan
+                            br
+                            | De Oro
+
+    // Footer
+    footer.footer.py-4.bg-light
+        .container
+            .row.align-items-center
+                .col-lg-4.text-lg-start
+                    | Copyright &copy; RAD TATTOO 2022
+                .col-lg-4.my-3.my-lg-0
+                    a.btn.btn-dark.btn-social.mx-2(href='#!')
+                        i.fab.fa-instagram
+                    a.btn.btn-dark.btn-social.mx-2(href='https://web.facebook.com/ranytattoos')
+                        i.fab.fa-facebook-f
+                    a.btn.btn-dark.btn-social.mx-2(href='https://www.youtube.com/channel/UCF-gNHNuy6qJAIXALvS7QzA')
+                        i.fab.fa-youtube
+                .col-lg-4.text-lg-end
+                    a.link-dark.text-decoration-none.me-3(href='#!') Contact Us Now:
+                    a.link-dark.text-decoration-none(href='#!') +639171137852

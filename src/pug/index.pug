@@ -1,16 +1,6 @@
 extends layout.pug
  
 block content
-    //- header
-    //-     .overlay
-    //-     video(plasinline="playsinline", autoplay="autoplay", muted="muted", loop="loop")
-    //-         source(src="assets/video.mp4", type="video/mp4")
-    //-     .container.h-100
-    //-         .d-flex.h-100.text-center.align-items-center
-    //-             .w-100.text-white
-    //-                 h1.display-3 Welcome To RAD Tattoo
-    //-                 p.lead.mb-0 Your tattoo & peircing shop
-    //-                 a.btn.btn-primary.btn-xl.text-uppercase(href='#gallery') Check Our Gallery
     header
         #carouselExampleCaptions.carousel.slide(data-bs-ride="carousel")
             .carousel-indicators
@@ -69,7 +59,7 @@ block content
             .text-center
                 h2.section-heading.text-uppercase.highlighted Our Works
                 h3.section-subheading.text-muted Discover our works from minimal, medium to large designs.
-            .row
+            .row(data-toggle="modal" data-target="#exampleModal") 
                 .col-lg-4.col-sm-6.mb-4
                     // Portfolio item 1
                     .portfolio-item
@@ -103,6 +93,38 @@ block content
                         .portfolio-caption
                             .portfolio-caption-heading Large
                             .portfolio-caption-subheading.text-muted See More 
+
+
+    .modal.fade#exampleModal(tabindex="-1", role="dialog", aria-hidden="true")
+        .modal-dialog(role="document")
+            .modal-content
+                .model-header
+                    button.close(type="button", data-dismiss="modal", aria-label="close")
+                        span(aria-hidden="true") $times;
+                .modal-body
+                    .carousel.slide#carouselExample(data-ride="carousel")
+                         ol.carousel-indicators
+                            li.active(data-target="#carouselExample", data-slide-to="0")
+                            li(data-target="#carouselExample", data-slide-to="1")
+                            li(data-target="#carouselExample", data-slide-to="2")
+                    .carousel-inner
+                        .gallery-carousel-item.active
+                            img.d-block.w-100(src="assets/img/portfolio/small.jpg", alt="First Slide")
+                        .gallery-carousel-item
+                            img.d-block.w-100(src="assets/img/portfolio/medium.jpg", alt="Second Slide")
+                        .gallery-carousel-item
+                            img.d-block.w-100(src="assets/img/portfolio/large.jpg", alt="Thirde Slide")
+                    a.carousel-control-prev(href="#carouselExample", role="button", data-slide="prev")
+                        span.carousel-control-prev-icon(aria-hidden="true")
+                        span.sr-only Previous
+                    a.carousel-control-next(href="#carouselExample", role="button", data-slide="next")
+                        span.carousel-control-next-icon(aria-hidden="true")
+                        span.sr-only Next
+                .modal-footer
+                    button.btn.btn-secondary(type="button", data-dismiss="modal") Close
+
+
+
 
     // Artists
     section#team.page-section
